@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class C1Hero {
 	public String name;
 	private int hp, mp;
@@ -24,5 +26,10 @@ public class C1Hero {
 			return false; //trim()メソッドは、文字列の先頭と最後に空白があった場合には取り除いて文字列を返すメソッド
 		}
 		return true;
+	}
+	
+	//hashCode()をオーバーライド
+	public int hashCode() {
+		return Objects.hash(this.name);
 	}
 }
